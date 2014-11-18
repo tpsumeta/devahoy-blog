@@ -1,0 +1,50 @@
+#social-buttons {
+	position:fixed;
+	top:15%; 
+	margin-left:-100px;
+	float:left;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color:#f36;
+	widows: 100px;
+	padding:0 0 2px 0;
+	z-index:9999;
+	visibility: hidden;
+
+	.button-share {
+		float:left;
+		clear:both;
+		margin:5px 5px 0 2px;
+	}
+}
+.show {
+	visibility: visible !important;
+}
+
+.share {
+	@include outer-container;
+	padding: em(16) 0;
+	margin: em(32) 0;
+	button {
+		min-width: 100px;
+		@include span-columns(4);
+	    @include media(max-width $small-screen) {
+	      @include span-columns(12);
+	      background: red;
+	    }
+	    &:hover {
+	    	opacity: 0.8;
+	    }
+	}
+	.twitter {
+		background: #00aced;
+	}
+	.google-plus {
+		background: #dd4b39;
+	}
+	.facebook {
+		background: #3b5998;
+	}
+}
+

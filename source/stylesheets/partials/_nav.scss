@@ -1,0 +1,111 @@
+#main-header {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 75%;
+  // margin-top: 59px;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: #222 no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+#main-header-home {
+  margin-bottom: 6rem;
+}
+#page-header {
+   position: relative;
+   top: em(320);
+   z-index: 500;
+   color: #fff;
+}
+#blog-header {
+   position: relative;
+   top: em(120);
+   z-index: 500;
+   color: #fff;
+}
+.active {
+  font-weight: bold;
+  a {
+    color: #fff !important;
+  }
+}
+.navbar {
+  background: lighten($da-black, 5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @include transition(all, 0.4s);
+  z-index: 9999;
+  .blog-title {
+    color: #fff;
+  }
+  a {
+    padding: em(5) em(16);
+    color: #808080;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.navbar-transparent {
+  background: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @include transition(all, 0.4s);
+  z-index: 9999;
+  a {
+    padding: em(5) em(16);
+    color: rgba(255, 255, 255, 0.75);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.navbar-up {
+  top: em(-32);
+  a {
+    padding: em(5) em(16);
+    color: #808080;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.navbar-brand {
+  padding: em(20) 0;
+  padding-left: em(40);
+  float: left;
+  a {
+    font-size: 1em !important;
+  }
+}
+.navbar-link {
+  padding: em(20) 0;
+  padding-right: em(40);
+  float: right;
+  ul {
+    display: inline-block;
+    li {
+      display: inline;
+    }
+  }
+}
+
+nav {
+  display: block;
+  overflow: auto;
+  margin: 0;
+  a {
+    padding: em(5) em(16);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85em;
+  }
+}
+
+.navbar-home {
+  background: $da-black;
+}

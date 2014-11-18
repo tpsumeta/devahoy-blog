@@ -1,0 +1,11 @@
+.show-comment {
+	padding: em(16) 0;
+	@include span-columns(12);
+	background: #cecece;
+	color: #777;
+	&:hover {
+		background: #cecece;
+		color: #999;
+		opacity: 0.7;
+	}
+}
