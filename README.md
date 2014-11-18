@@ -4,19 +4,19 @@
 
 ## Usage
 
-1. clone this repo
+clone this repo
 
 	git@github.com:Devahoy/devahoy-blog.git
 
-2. install all gems
+install all gems
 
 	bundle install
 
-3. Run middleman and open [http://localhost:4567/](http://localhost:4567/)
+Run middleman and open [http://localhost:4567/](http://localhost:4567/)
 
 	middleman
 
-4. Generate static folder 
+Generate static folder 
 
 	middleman build
 
