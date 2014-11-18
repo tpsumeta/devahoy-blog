@@ -19,3 +19,9 @@
 
 
 .idea/
+Gemfile.lock
+build
+rdoc
+/bin
+*.sublime-workspace
+.tmp
