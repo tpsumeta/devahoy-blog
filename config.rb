@@ -46,6 +46,7 @@ set :blog_name, 'Dev::Ahoy'
 set :blog_description, 'Blog เกี่ยวกับการเขียนโปรแกรม Android, การทำแอพ Android, ทำ Games, Android Games และ Web Development'
 set :copyright, 'DevAhoy.com'
 set :cover_image, '/images/cover/bg.svg'
+set :author_name, 'Chai Phonbopit'
 
 ###
 # Compass
