@@ -1,0 +1,11 @@
+<%= partial 'partials/share' %>
+<section class="recent-post">
+  <h2 class="recent-heading">Recent Articles</h2>
+	<ul>
+	  <% blog.articles[0...5].each do |article| %>
+	    <li>
+	      <%= link_to article.title, article %>
+	    </li>
+	  <% end %>
+	</ul>
+</section>

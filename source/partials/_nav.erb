@@ -1,0 +1,17 @@
+	
+<nav class="navbar-transparent">
+	<div class="navbar-brand">
+		<!-- <img src="/images/logo.png" alt="Logo" class="logo"> -->
+		<%= link_to blog_name, "/", :class => 'blog-title' %>
+	</div>
+
+	<div class="navbar-link">
+		<ul id="nav">
+			<li <% if current_page.data.slug === "android-tutorial" %>class="active"<% end %>><a href="/tutorials/android/">Android</a></li>
+			<li <% if current_page.data.slug === "game-dev" %>class="active"<% end %>><a href="/tutorials/game-dev/">Games</a></li>
+			<li <% if current_page.data.slug === "archive" %>class="active"<% end %>><a href="/archive/">Archive</a></li>
+			<li <% if current_page.data.slug === "about" %>class="active"<% end %>><a href="/about/">About</a></li>
+		</ul>
+	</div>
+
+</nav>

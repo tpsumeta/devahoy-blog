@@ -1,0 +1,9 @@
+<article class="type-system-rounded">
+	<p class="type"><%= article.data.category %></p>
+	<h1 class="post-title"><%= link_to article.title, article %></h1>
+	<p class="date"><%= article.date.strftime('%B %d, %Y') %></p>
+
+	<%= article.summary %>
+	<%= link_to 'Read More <span>&rsaquo;</span>', article, :class=> 'read-more' %>
+</article>
+<hr>
