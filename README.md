@@ -2,6 +2,23 @@
 
 **[Devahoy](http://devahoy.com/)** created with [Middleman](http://middlemanapp.com/) and hosted on Amazon e3. 
 
+## Usage
+
+1. clone this repo
+
+	git@github.com:Devahoy/devahoy-blog.git
+
+2. install all gems
+
+	bundle install
+
+3. Run middleman and open [http://localhost:4567/](http://localhost:4567/)
+
+	middleman
+
+4. Generate static folder 
+
+	middleman build
 
 ## Stack & Tools
 
