@@ -14,11 +14,11 @@ install all gems
 
 Run middleman and open [http://localhost:4567/](http://localhost:4567/)
 
-	middleman
+	bundle exec middleman server
 
 Generate static folder 
 
-	middleman build
+	bundle exec middleman build
 
 ## Stack & Tools
 

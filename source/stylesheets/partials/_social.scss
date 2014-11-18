@@ -26,12 +26,20 @@
 	@include outer-container;
 	padding: em(16) 0;
 	margin: em(32) 0;
-	button {
-		min-width: 100px;
+	a {
+		-webkit-font-smoothing: antialiased;
+		border-radius: 3px;
+		color: #FFF;
+		text-align: center;
+		font-size: 1em;
+		font-weight: bold;
+		line-height: 1;
+		padding: 0.75em 1em;
+		text-decoration: none;
+
 		@include span-columns(4);
 	    @include media(max-width $small-screen) {
 	      @include span-columns(12);
-	      background: red;
 	    }
 	    &:hover {
 	    	opacity: 0.8;

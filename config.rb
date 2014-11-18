@@ -41,7 +41,7 @@ page "/feed.xml", layout: false
 
 ## Default Global Variable
 
-set :blog_url, 'http://devahoy.com/'
+set :blog_url, 'http://devahoy.com'
 set :blog_name, 'Dev::Ahoy'
 set :blog_description, 'Blog เกี่ยวกับการเขียนโปรแกรม Android, การทำแอพ Android, ทำ Games, Android Games และ Web Development'
 set :copyright, 'DevAhoy.com'
@@ -83,7 +83,7 @@ set :cover_image, '/images/cover/bg.svg'
 ###
 
 # Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
+# activate :automatic_image_sizes
 
 
 
