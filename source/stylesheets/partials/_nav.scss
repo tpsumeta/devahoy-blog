@@ -6,7 +6,10 @@
   // margin-top: 59px;
   margin-bottom: 2rem;
   text-align: center;
-  background: #222 no-repeat 50% 50%;
+  background: #222 no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
 
