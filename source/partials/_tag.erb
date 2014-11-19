@@ -1,14 +1,14 @@
-<div class="container">
-  <ul class="small-column">
-    <li>
-      <h5 class="heading">Tags</h5>
-    </li>
-    <li>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
+ <% unless current_article.data.tags.nil? %>
+ <hr>
+  <div class="post-tag">
+    <h3 class="heading">Tags : </h3>
+      <ul>
+        <% current_article.data.tags.each do |tag| %>
+          <li>
+            <%= link_to "##{tag}", tag_path(tag) %>
+          </li>
         <% end %>
-      </ol>
-    </li>
-  <ul>
-</div>
+      </ul>
+  </div>
+<% end %>
+

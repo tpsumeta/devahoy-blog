@@ -1,0 +1,18 @@
+.post-tag {
+	@include outer-container;
+	.heading {
+		display: inline-block;
+	}
+	ul {
+		margin: em(16) !important;
+		display: inline;
+		li {
+			display: inline-block ;
+			list-style: none ;
+			margin: em(16);
+			a {
+				padding: em(8);
+			}
+		}
+	}
+}
