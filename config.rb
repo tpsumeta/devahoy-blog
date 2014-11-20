@@ -133,7 +133,6 @@ configure :build do
   end
 =end
 
-
   # Use relative URLs
    # activate :relative_assets
 
