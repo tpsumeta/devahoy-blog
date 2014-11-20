@@ -25,3 +25,6 @@ rdoc
 /bin
 *.sublime-workspace
 .tmp
+
+# Not include source/images/
+source/images/
