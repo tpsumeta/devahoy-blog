@@ -9,7 +9,6 @@ tags:
  - Android Relative
  - แอนดรอยส์ layout
 ---
----
 
 บทความ Android วันนี้ ขอนำเสนอเรื่อง การทำ Load More ให้กับ ListView ไม่ใช่การทำ Load More ที่มี Button นะ แต่เป็นการใช้การ Scroll เพื่อทำการโหลดข้อมูลใหม่มาแสดงใน ListView
 

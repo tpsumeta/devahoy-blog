@@ -1,29 +1,36 @@
 ---
-title: มาทำ RESTFul API ด้วย Node.js กับ Express กันดีกว่า
-published: false
+title: สอนวิธีใช้งาน Spinner บน Android
+category: Android
+cover: /images/2014/09/spinner-cover.png
+tags:
+ - Android
+ - Android Spinner
+ - Android Custom Spinner
+ - สอน Android
+ - ทำ Android Spinner
 ---
 
 บทความ Android วันนี้ ขอนำเสนอเรื่อง การทำ Drop-Down Menu ด้วยการใช้ Spinner หลักจากที่พบว่าหลายๆคนมีปัญหาเกี่ยวกับการใช้งาน Spinner กันพอสมควร มีบางคนสอบถามมาว่าสร้างยังไง วันนี้ก็จะมานำเสนอ วิธีทำและตัวอย่างประกอบครับ
 
 ตัวอย่าง Spinner
 
-![Spinner](http://devahoy.com/wp-content/uploads/2014/09/spinner.png)
+![Spinner](/images/2014/09/spinner.png)
 
 ## Create Project
 
 เริ่มต้นสร้างโปรเจ็คขึ้นมา 
 
-![Create Project](http://devahoy.com/wp-content/uploads/2014/09/create-project5-500x361.png)
+![Create Project](/images/2014/09/create-project5.png)
 
-![Create Project2](http://devahoy.com/wp-content/uploads/2014/09/create-project22-500x361.png)
+![Create Project2](/images/2014/09/create-project22.png)
 
-![Create Project3](http://devahoy.com/wp-content/uploads/2014/09/create-project32-500x360.png)
+![Create Project3](/images/2014/09/create-project32.png)
 
-![Create Project4](http://devahoy.com/wp-content/uploads/2014/09/create-project42-500x361.png)
+![Create Project4](/images/2014/09/create-project42.png)
 
 หากขึ้นข้อความแบบข้างล่างนี้ เนื่องจาก Android Studio เวอร์ชันล่าสุด เปลี่ยนไปใช้ Gradle Plugin เวอร์ชั่น 0.13 ซึ่งมัน required Gradle เวอร์ชัน 2.1 หากเครื่องเราไม่มี มันก็จะทำการเตือน กด OK เพื่ออัพเดท Gradle ครับ
 
-![Gradle SYnc](http://devahoy.com/wp-content/uploads/2014/09/gradle-sync.png)
+![Gradle SYnc](/images/2014/09/gradle-sync.png)
 
 สังเกตที่ไฟล์ `build.gradle` ในส่วน Root Project ต้องเป็นดังนี้
 
@@ -54,7 +61,6 @@ distributionUrl=http\://services.gradle.org/distributions/gradle-2.1-all.zip
 
 Spinner เป็น View หรือ Widget ตัวหนึ่งของ Android ที่เอาไว้แสดงเมนูรายชื่อ แบบ Drop-Down 
 
-![]()
 
 ขั้นตอนการสร้าง Spinner มีดังนี้
 
@@ -216,15 +222,15 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ตัว `simple_dropdown_item_1line` เป็นเลเอาท์ default ของทาง Android นะครับ เมื่อทดสอบรันโปรแกรม จะได้หน้าตาดังนี้
 
-![Spinner Demo](http://devahoy.com/wp-content/uploads/2014/09/spinner-demo-300x500.png)
+![Spinner Demo](/images/2014/09/spinner-demo.png)
 
 ส่วน layout ของ Spinner เราก็สามารถเปลี่ยนได้นะ ลองใช้ `simple_spinner_item` แทน จะได้ item list ที่ช่องไฟเล็กลง ดังนี้
 
-![Spinner Item](http://devahoy.com/wp-content/uploads/2014/09/spinner-demo2-300x500.png)
+![Spinner Item](/images/2014/09/spinner-demo2.png)
 
 สุดท้าย เมื่อได้ Spinner แล้ว ต่อไปก็ใส่ Listener ให้มัน ตัว Spinner จะใช้ `setOnItemSelectedListener()` เพื่อส่ง Listener เมื่อเราทำการเลือกไอเท็มใน Spinner โดยตัว `setOnItemSelectedListerner()` จะรับ interface `AdapterView.OnItemSelectedListener()` ดังนี้
 
-```
+```java
 // setOnItemSelectedListener
 mThaiSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
     @Override
@@ -254,7 +260,7 @@ mEnglishSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener
 });
 ```
 
-![Spinner Listener](http://devahoy.com/wp-content/uploads/2014/09/spinner-demo3-300x500.png)
+![Spinner Listener](/images/2014/09/spinner-demo3.png)
 
 ## Custom Spinner with Custom Adapter
 
@@ -291,7 +297,7 @@ mEnglishSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener
 
 สร้างไฟล์ `CustomAdapter.java` ขึ้นมาดังนี้
 
-```
+```java
 package com.devahoy.android.spinnerdemo;
 
 import android.content.Context;
@@ -427,7 +433,7 @@ spinnerMenu.setAdapter(customAdapter);
 
 ทดสอบรันโปรแกรม ผลลัพธ์เป็นดังนี้
 
-![Custom Spinner ](http://devahoy.com/wp-content/uploads/2014/09/spinner-demo4-300x500.png)
+![Custom Spinner ](/images/2014/09/spinner-demo4.png)
 
 
 สุดท้าย ก็ลองไปประยุกต์ใช้งานกันดูนะครับ  มีพวกการโหลดข้อมูลมาใส่ Spinner โดยดึงข้อมูลมาจาก SQLite หรือว่าจะเป็นการรับข้อมูลมาจาก Web Service ต่างๆ เป็นต้น สำหรับบทความนี้ก็ยกตัวอย่างมาพอสมควรแล้ว ทีเหลือก็ขึ้นอยู่กับผู้อ่าน นำไปประยุกต์ใช้งานแล้วละครับ ขอให้โชคดี Happy Coding

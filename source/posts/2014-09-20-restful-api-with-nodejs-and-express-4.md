@@ -1,6 +1,15 @@
 ---
 title: มาทำ RESTFul API ด้วย Node.js กับ Express กันดีกว่า
-published: false
+category: Web Development
+cover: /images/cover/nodejs-cover.png
+tags:
+ - Express.js
+ - Express
+ - Node
+ - Node.js
+ - Node.js + Express
+ - สอน Node.js
+ - Node.js คือ
 ---
 
 *Cover Image : nodejs.org/*
