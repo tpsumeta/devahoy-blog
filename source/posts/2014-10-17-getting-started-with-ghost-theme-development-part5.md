@@ -32,7 +32,7 @@ tags:
 
 สำหรับการใส่ Disqus Comment เริ่มแรก ต้องเข้าเว็บไซต์ [https://disqus.com/admin/create/](https://disqus.com/admin/create/) เพื่อสร้าง Disqus ของเราขึ้นมาก่อน assume ว่ามีแล้วละกันนะครับ ไม่มีก็ไปสร้างเอานะ 
 
-![Disqus](images/2014/10/disqus-500x330.png)
+![Disqus](images/2014/10/disqus.png)
 
 หากมีอยู่แล้ว เข้าไปก็อปโค๊ดในส่วน Universal Code จากหน้า [https://your-blog-name.disqus.com/admin/settings/universalcode/](https://your-blog-name.disqus.com/admin/settings/universalcode/) หรือใช้โค๊ดข้างล่างก็ได้ แต่อย่าลืมเปลี่ยนชื่อ `disqus_shortname` ด้วยละ
 
@@ -69,13 +69,13 @@ tags:
 
 เมื่อเวลาเข้าหน้าโพส ก็จะเห็น Comment อยู่ที่ใต้บทความดังนี้
 
-![Disqus](images/2014/10/part5-disqus-500x161.png)
+![Disqus](images/2014/10/part5-disqus.png)
 
 ## Facebook
 
 สำหรับการใส่ Facebook Comment ใช้วิธีคล้ายๆกัน คือ สร้างไฟล์ในโฟลเดอร์ `partials` ชื่อว่า `comment_facebook.hbs` จากนั้นเข้าไปหน้า [Facebook Developer](https://developers.facebook.com/docs/plugins/comments) แล้วทำการ Get Code ออกมา 
 
-![Fb Gen Code](images/2014/10/part5-fb-500x319.png)
+![Fb Gen Code](images/2014/10/part5-fb.png)
 
 เช่น
 
@@ -119,7 +119,7 @@ tags:
 
 เมื่อเวลาเข้าหน้าโพส ก็จะเห็น Comment อยู่ที่ใต้บทความดังนี้
 
-![Fb](images/2014/10/part5-facebook-500x193.png)
+![Fb](images/2014/10/part5-facebook.png)
 
 ## Google Plus
 
@@ -144,7 +144,7 @@ tags:
 
 เมื่อเวลาเข้าหน้าโพส ก็จะเห็น Comment อยู่ที่ใต้บทความดังนี้
 
-![Google](images/2014/10/part5-google-500x245.png)
+![Google](images/2014/10/part5-google.png)
 
 
 ## Syntax Highlight
@@ -227,7 +227,7 @@ $("pre code").each(function(i, e) {hljs.highlightBlock(e); });
 
 หมดแล้ว สำหรับบทสอน Ghost Theme Development ทั้ง 5 ตอน หลังจากผ่านมา 5 ตอน ตอนนี้ Theme ของเรามีหน้าตาแบบนี้
 
-![Result](images/2014/10/part5-index-647x1024.png)
+![Result](images/2014/10/part5-index.png)
 
 ต้องขอบคุณ Theme สวยๆ จากที่นี่ด้วย [Start Bootstrap : Clean Blog](http://startbootstrap.com/templates/clean-blog/index.html) 
 

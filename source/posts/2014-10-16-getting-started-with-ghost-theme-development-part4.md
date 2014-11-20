@@ -50,11 +50,80 @@ tags:
 
 ตัวไฟล์ `page-contact.hbs` มีดังนี้
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=page-contact.hbs"></script>
+```hbs
+{{!< default}}
+ 
+{{> header_contact}}
+ 
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+            <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+            <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+            <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Message</label>
+                        <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-default">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
+<hr>
+```
 
 รวมถึงสร้าง `header_contact.hbs` ขึ้นมาเพื่อเก็บในส่วน header ของ contact ด้วย ดังนี้
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=header_contact.hbs"></script>
+```hbs
+<header class="intro-header" style="background-image: url('{{asset "img/home-bg.jpg"}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    <h1>Contact Me</h1>
+                    <hr class="small">
+                    <span class="subheading">Have questions? I have answers (maybe).</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+```
 
 
 > การทำ Page ใน Ghost เราจำเป็นที่จะต้องสร้าง Post ขึ้นมาให้ url ตรงกันกับ Page และปรับเป็น Static Page นะครับ ตัว Page ถึงจะทำงาน ไม่อย่างงั้นก็จะเจอ 404 Error 
@@ -68,18 +137,70 @@ tags:
 
 จาก 
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=nav.html"></script>
+```html
+<a class="navbar-brand" href="index.html">Start Bootstrap</a>
+ 
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+    <li>
+        <a href="about.html">About</a>
+    </li>
+    <li>
+        <a href="post.html">Sample Post</a>
+    </li>
+    <li>
+        <a href="contact.html">Contact</a>
+    </li>
+</ul>
+```
 
 เปลี่ยนเป็น
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=nav.hbs"></script>
+```html
+<a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <a href="{{@blog.url}}">Home</a>
+    </li>
+    <li>
+        <a href="{{@blog.url}}/about">About</a>
+    </li>
+    <li>
+        <a href="{{@blog.url}}/contact">Contact</a>
+    </li>
+</ul>
+```
 
 - `{{@blog.url}}` : เป็น Global Helper ที่เอาไว้แสดง ๊URL ของ Blog เรา ค่านี้เราสามารถตั้งค่าได้ที่ไฟล์ `config.js` ในโฟลเดอร์ Ghost
 - `{{@blog.title}}` : ส่วนนี้คือ Blog Title เราสามารถไปตั้งค่า ได้จากหน้า Settings ครับ
 
 ต่อมาเปิดไฟล์ `partials/header_index.hbs` ขึ้นมา แล้วแก้ไขเป็นแบบนี้
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=header_index.hbs"></script>
+```hbs
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" 
+{{#if @blog.logo}}
+    style="background-image: url('{{@blog.logo}}')">
+{{else}}
+    style="background-image: url('assets/img/home-bg.jpg')">
+{{/if}}
+ 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{@blog.title}}</h1>
+                    <hr class="small">
+                    <span class="subheading">{{@blog.description}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+```
 
 - `{{#if }}` , `{{else}}` และ `{{/if}}` : เป็น Condition Helper ที่เอาไว้ช่วยให้เราสามารถแทรก If Statement ลงไปในไฟล์ hbs ได้ อย่างกรณีนี้คือ เช็คว่า บล็อคนี้มีโลโก้หรือไม่ ถ้ามี ก็ให้แสดงโลโก้ ถ้าไม่มีก็ให้ใช้ไฟล์ใน `assets/img/home-bg.jpg` แทน
 - `{{@blog.logo}}` : เป็น Global Helper ที่เอาไว้แสดง Logo ของ Blog
@@ -89,7 +210,7 @@ tags:
 
 เมื่อลองกดเข้าหน้า [http://localhost:2368/](http://localhost:2368/) จะเห็นว่าหน้าตาบล็อคของเรา เปลี่ยนโลโก้และคำอธิบาย ได้ถูกต้องแล้ว
 
-![Index with Logo](images/2014/10/part4-index-1024x772.png)
+![Index with Logo](images/2014/10/part4-index.png)
 
 > Credit Image : [Thaweepong Grunge](https://www.facebook.com/profile.php?id=100000041706306) ใครสนใจจ้างทำ Graphic Design หรือว่า Traditional Art ติดต่อได้นะครับ
 
@@ -97,7 +218,14 @@ tags:
 
 ต่อมา ทำแบบนี้กับหน้า Post บ้าง เปิดไฟล์ `header_post.hbs` และแก้ไขไฟล์ดังนี้ (เปลี่ยนแค่เฉพาะส่วน `header`)
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=header_post.hbs"></script>
+```hbs
+<header class="intro-header" 
+{{#if image}}
+    style="background-image: url('{{image}}')">
+{{else}}
+    style="background-image: url('{{asset "img/home-bg.jpg"}}')">
+{{/if}}
+```
 
 ด้านบนจะคล้ายๆกับ `header_index.hbs` คือ เป็น If statement เพื่อเช็คว่า โพสนี้มีการตั้ง Post Image ไว้หรือไม่ ถ้ามี ก็ให้แสดง ถ้าไม่มีก็ใช้รูป default
 
@@ -113,7 +241,15 @@ tags:
 
 ทีนี้ลองเพิ่มส่วน Page ไปในไฟล์ `index.hbs` ร่วมกันกับ Pager เดิมเลยครับ
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=page.html"></script>
+```html
+{{pagination}}
+<!-- Pager -->
+<ul class="pager">
+    <li class="next">
+        <a href="#">Older Posts &rarr;</a>
+    </li>
+</ul>
+```
 
 หน้าเว็บเรา ส่วนล่างจะเห็น ลักษณะนี้
 
@@ -125,7 +261,21 @@ tags:
 
 ไฟล์ `pagination.hbs`
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=pagination.hbs"></script>
+```hbs
+<!-- Pager -->
+<ul class="pager">
+    {{#if prev}}
+    	<li class="previous">
+    		<a href="{{page_url prev}}">&larr; Newer Posts</a>
+    	</li>
+    {{/if}}
+    {{#if next}}
+    	<li class="next">
+    		<a href="{{page_url next}}">Older Posts &rarr;</a>
+    	</li>
+    {{/if}}
+</ul>
+```
 
 อธิบายโค๊ดด้านบน
 
@@ -136,17 +286,21 @@ tags:
 
 เมื่อทำการ override Pagination ของเราเอง ก็ต้องสั่ง restart server ก่อนถึงจะเห็นผล ลองทดสอบเข้าเว็บใหม่อีกครั้ง จะเห็น Pagination ดังรูป
 
-![New](images/2014/10/newer-post-500x169.png)
+![New](images/2014/10/newer-post.png)
 
-![Old](images/2014/10/older-post-500x149.png)
+![Old](images/2014/10/older-post.png)
 
 สุดท้ายไฟล์ `footer.hbs` เราแก้ไขในส่วนของ Copyright บรรทัดนี้
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=copy.html"></script>
+```html
+<p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+```
 
 เป็น
 
-<script src="https://gist.github.com/Phonbopit/8231d7258db28ae7136a.js?file=copy.hbs"></script>
+```hbs
+<p class="copyright text-muted">Copyright &copy; {{@blog.title}} {{date format="YYYY"}}</p>
+```
 
 ส่วนลิงค์ Social อื่นๆ ก็ใส่ลิงค์ที่ต้องการลงไปครับ
 
