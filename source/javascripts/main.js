@@ -34,7 +34,7 @@ $(function() {
     $($(this).attr('href')).addClass('active');
   });
 
-  $('a').fluidbox({
+/*  $('a').fluidbox({
     viewportFill: 1.8,
     closeTrigger: [
       {
@@ -42,7 +42,7 @@ $(function() {
         //event: 'scroll'
       }
     ]
-  });
+  });*/
 
   $('.show-comment').on('click', function() {   
     var disqus_shortname = 'devahoy';

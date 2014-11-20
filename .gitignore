@@ -26,3 +26,6 @@ rdoc
 *.sublime-workspace
 .tmp
 
+
+# Ignore post-temp
+source/post-temp
