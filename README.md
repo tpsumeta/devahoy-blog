@@ -1,4 +1,4 @@
-## Devahoy Blog
+## Devahoy Blog  [ ![Codeship Status for Devahoy/devahoy-blog](https://codeship.com/projects/3c9279a0-5307-0132-2f7a-426e83f94b6a/status)](https://codeship.com/projects/48839)
 
 **[Devahoy](http://devahoy.com/)** created with [Middleman](http://middlemanapp.com/) and hosted on Amazon e3. 
 
