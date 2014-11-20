@@ -1,9 +1,12 @@
 	<article class="type-system-rounded">
 		<p class="type"><%= current_article.data.category %></p>
 		<h1><%= current_article.title %></h1>
-		<div class="addthis_native_toolbox"></div>
+
 		<p class="date"><%= current_article.date.strftime('%B %d, %Y') %></p>
 		<%= partial 'partials/share' %>
+
+		<%= partial 'partials/disclamer' %>
+		
 		<%= current_article.body %>
 
 		<%= partial 'partials/tag' %>
