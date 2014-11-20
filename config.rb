@@ -107,7 +107,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'devahoy.com' 
-  s3_sync.region                     = 'us-east-1'    
+  s3_sync.region                     = 'us-west-2'    
   s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
   s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
 end
