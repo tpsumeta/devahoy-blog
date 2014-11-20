@@ -1,0 +1,19 @@
+---
+layout: custom-page
+slug: archive
+title: Archive (บทความทั้งหมด)
+cover: /images/cover/archive.svg
+---
+<ul>
+	<% year = [] %>
+	<% page_articles.each_with_index do |post, i| %>
+		<% if (!year.include? post.date.strftime('%Y')) %>
+			<h1><%= post.date.strftime('%Y') %></h1>
+		<% year.push(post.date.strftime('%Y'))  
+		   end %>
+		<li>
+			<%= link_to post.title, post %>
+		</li>
+	<% end %>
+</ul>
+

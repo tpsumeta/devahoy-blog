@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]> ><! <![endif]-->
+<html class="no-js" lang='en'>
+<!-- <![endif] -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><% if current_article.nil? %> <%= blog_name %> : <%= blog_description %> <% else %> <%= current_article.title %> <% end %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag 'main' %>
+    <%= stylesheet_link_tag 'fluidbox' %>
+    <%= favicon_tag 'favicon.png' %>
+
+    <meta content='<%if current_article.nil? %> <%= blog_name %> - <%= blog_description %> <% else %> <%= current_article.title%> <% end %>' property='og:title'>
+    <meta content='<%= blog_url %>' property='og:url'>
+    <meta content='<%= blog_name %>' property='og:site_name'>
+  </head>
+  <body>
+
+    <header id="main-header" 
+        <% if current_page.data.cover.nil? %>
+          style="background-image: url(<%= cover_image %>)" 
+        <% else %> 
+          style="background-image: url(<%= current_page.data.cover %>)" 
+        <% end %>
+      >
+        <%= partial "partials/nav" %>
+        <%= partial "partials/page_header" %>
+    </header>
+
+    <div id="main" role="main">
+      <article class="type-system-rounded">
+        <%= yield %>
+          <hr>
+        <%= partial "partials/comment" %>
+      </article>
+    </div>
+
+
+    <%= partial "partials/footer" %>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <%= javascript_include_tag "jquery.fluidbox" %>
+    <%= javascript_include_tag "main" %>
+    <%= partial "partials/analytics" %>
+  </body>
+</html>
