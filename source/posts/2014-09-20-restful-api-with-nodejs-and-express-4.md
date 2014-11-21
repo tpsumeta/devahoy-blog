@@ -257,7 +257,7 @@ app.listen(port, function() {
 
 หน้าตาของ Postman
 
-![Postman](http://devahoy.com/wp-content/uploads/2014/09/postman.png)
+![Postman](/images/2014/09/postman.png)
 
 สั่ง 
 
@@ -278,7 +278,7 @@ node index.js
 
 ลองกด Send ดู...
 
-![Test POST Method](http://devahoy.com/wp-content/uploads/2014/09/post.png)
+![Test POST Method](/images/2014/09/post.png)
 
 Error ซิครับ :D
 
@@ -311,7 +311,7 @@ app.use(bodyParser.urlencoded({
 
 ทดสอบ start server ใหม่อีกครั้ง
 
-![Completed](http://devahoy.com/wp-content/uploads/2014/09/zoro.png)
+![Completed](/images/zoro.png)
 
 ่เรียบร้อย! ได้ผลลัพธ์ตามที่ต้องการ 
 

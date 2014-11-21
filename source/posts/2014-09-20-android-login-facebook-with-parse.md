@@ -65,7 +65,7 @@ git checkout part3
 1. ต้องมี Facebook App ซะก่อน ใครไม่มี [ก็ไปทำการสร้างซะ](https://developer.facebook.com) หรืออ่านจากบทความนี้ประกอบ [สร้างปุ่ม Facebook Login บน Android](http://devahoy.com/2014/04/facebook-sdk-for-android-login-button/)
 2. นำ Facebook AppId และ SecretId มาใส่ใน Parse โดยเข้าไปที่ **Settings** => **Authentication** และเลือก **Allow Facebook authentication** เป็น Yes
 
-![Add](images/2014/09/add-facebook.png)
+![Add](/images/2014/09/add-facebook.png)
 
 3. ทำการเพิ่ม Facebook SDK เข้ามาในโปรเจ็คบน [Android Studio อ่านตัวอย่างนี้ประกอบ](http://devahoy.com/2014/05/facebook-sdk-for-android-using-android-studio/) เมื่อเพิ่ม Facebook SDK เป็น Module Library แล้ว ก็เปิดไฟล์ `build.gradle` ในโมดูล facebook ขึ้นมา แล้วแก้ไขเป็นแบบนี้
 
@@ -252,7 +252,7 @@ public class LoginActivity extends ActionBarActivity {
 
 เมื่อรันแอพพลิเคชันขึ้นมา กดปุ่ม Button จะได้หน้าจอดังนี้
 
-![Login Facebook](images/2014/09/screen.png)
+![Login Facebook](/images/2014/09/screen.png)
 
 
 ## เชื่อม Facebook กับ Account เดิม
