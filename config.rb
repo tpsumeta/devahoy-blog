@@ -38,6 +38,7 @@ end
 activate :directory_indexes
 
 page "/feed.xml", layout: false
+page "/sitemap.xml", layout: false
 
 ## Default Global Variable
 

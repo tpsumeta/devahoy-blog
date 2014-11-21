@@ -25,12 +25,14 @@ Generate static folder
 - Ruby, Markdown
 - [Middleman](http://middlemanapp.com/)
 	- [Middleman s3 sync](https://github.com/fredjean/middleman-s3_sync)
+    - [Middleman Cloudfront](https://github.com/andrusha/middleman-cloudfront)
 	- [Middleman ImageOptim](https://github.com/plasticine/middleman-imageoptim)
 	- [Middleman-Blog](https://github.com/middleman/middleman-blog)
 - [Amazon Cloud](http://aws.amazon.com/)
 - [Bourbon.io](http://bourbon.io/)
 - [FluidBox](https://github.com/terrymun/Fluidbox)
 - [Trianglify](http://qrohlf.com/trianglify/)
+- [Codeship](https://codeship.com/)
 - Sublime Text 3 & Brackets
 
 ## License
