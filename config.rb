@@ -46,7 +46,7 @@ set :blog_url, 'http://devahoy.com'
 set :blog_name, 'Dev::Ahoy'
 set :blog_description, 'Blog เกี่ยวกับการเขียนโปรแกรม Android, การทำแอพ Android, ทำ Games, Android Games และ Web Development'
 set :copyright, 'DevAhoy.com'
-set :cover_image, '/images/cover/bg.svg'
+set :cover_image, '/images/cover/bg.png'
 set :author_name, 'Chai Phonbopit'
 
 ###
@@ -105,21 +105,6 @@ set :images_dir, 'images'
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
-
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'devahoy.com' 
-  s3_sync.region                     = 'us-west-2'    
-  s3_sync.aws_access_key_id          = ENV['AWS_ACCESS_KEY_ID']
-  s3_sync.aws_secret_access_key      = ENV['AWS_SECRET_ACCESS_KEY']
-end
-
-activate :cloudfront do |cf|
-  cf.access_key_id = ENV['AWS_ACCESS_KEY_ID']
-  cf.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
-  cf.distribution_id = 'E31QC0V6NKYO6L'
-  # cf.filter = /\.html$/i  # default is /.*/
-  cf.after_build = false  # default is false
-end
 
 # Build-specific configuration
 configure :build do
