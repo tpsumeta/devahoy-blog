@@ -4,13 +4,21 @@ slug: archive
 title: Archive (บทความทั้งหมด)
 cover: /images/cover/archive.png
 ---
-<ul>
+<ul class="archive">
 	<% year = [] %>
+	<% month = [] %>
 	<% page_articles.each_with_index do |post, i| %>
-		<% if (!year.include? post.date.strftime('%Y')) %>
-			<h1><%= post.date.strftime('%Y') %></h1>
-		<% year.push(post.date.strftime('%Y'))  
-		   end %>
+
+		<% unless month.include? post.date.strftime('%Y %B') %>
+
+			<% unless year.include? post.date.strftime('%Y') %>
+				<h1><%= post.date.strftime('%Y') %></h1>
+				<% year.push(post.date.strftime('%Y')) %>
+			<% end %>
+
+			<h3><%= post.date.strftime('%B') %></h3>
+			<% month.push(post.date.strftime('%Y %B')) %>
+		 <% end %>
 		<li>
 			<%= link_to post.title, post %>
 		</li>
