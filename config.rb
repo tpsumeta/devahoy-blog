@@ -118,7 +118,7 @@ activate :cloudfront do |cf|
   cf.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
   cf.distribution_id = 'E31QC0V6NKYO6L'
   # cf.filter = /\.html$/i  # default is /.*/
-  cf.after_build = true  # default is false
+  cf.after_build = false  # default is false
 end
 
 # Build-specific configuration
