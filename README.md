@@ -29,8 +29,6 @@ Generate static folder
 
 - Ruby, Markdown
 - [Middleman](http://middlemanapp.com/)
-	- [Middleman s3 sync](https://github.com/fredjean/middleman-s3_sync)
-    - [Middleman Cloudfront](https://github.com/andrusha/middleman-cloudfront)
 	- [Middleman ImageOptim](https://github.com/plasticine/middleman-imageoptim)
 	- [Middleman-Blog](https://github.com/middleman/middleman-blog)
 - [Bourbon.io](http://bourbon.io/)
