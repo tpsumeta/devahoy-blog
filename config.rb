@@ -126,12 +126,10 @@ configure :build do
   activate :gzip
 
   # Optimze Images
-=begin
   activate :imageoptim do |image_optim|
     image_optim.pngout_options = false # Should disable pngout
     image_optim.image_extensions = %w(.png .jpg .gif .svg)
   end
-=end
 
   # Use relative URLs
    # activate :relative_assets
