@@ -14,6 +14,7 @@ gem "redcarpet", "~> 3.2.0"
 
 # Sync with Amazon S3
 gem 'middleman-s3_sync'
+gem "middleman-cloudfront"
 
 # Thoughtbot Inc, Bourbon
 gem 'bourbon'

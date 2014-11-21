@@ -2,7 +2,7 @@
 
 **[Devahoy](http://devahoy.com/)** created with [Middleman](http://middlemanapp.com/) and hosted on Amazon s3. 
 
-## Usage
+## Run it locally
 
 clone this repo
 

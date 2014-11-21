@@ -14,7 +14,7 @@ tags:
 
 ## RelativeLayout คืออะไร ?
 
-[![RelativeLayout](/images/2014/11/relativelayout.png)](/images/2014/11/relativelayout.png)
+![RelativeLayout](/images/2014/11/relativelayout.png)
 
 **RelativeLayout** คือ View Group ตัวหนึ่งที่เอาไว้สำหรับแสดง Child View โดยที่การจัดเรียงกันจะมีความสัมพันธ์หรือเกี่ยวข้องกัน เช่น 
 
@@ -354,7 +354,7 @@ tags:
 
 จะได้รูปแบบนี้ (รูปตัวอย่างจาก [Gratisography](http://www.gratisography.com/) ไม่ได้รวมอยู่ด้วยนะครับ ไปหาโหลดหรือเปลี่ยนเอาเอง
 
-[![Relative Overlay Images](/images/2014/11/relative-overlay.png)](/images/2014/11/relative-overlay.png)
+![Relative Overlay Images](/images/2014/11/relative-overlay.png)
 
 ### สรุป
 
