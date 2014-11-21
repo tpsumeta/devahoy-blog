@@ -1,0 +1,6 @@
+  <section class="share">
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%= blog_url %><%= current_page.url %>" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Like</a>
+    <a class="twitter" href="https://twitter.com/share?text=<%= current_page.data.title %>&amp;url=<%= blog_url %><%= current_page.url %>" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Tweet</a>
+    <a class="google-plus" href="https://plus.google.com/share?url=<%= blog_url %><%= current_page.url %>" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">+1</a>
+  </section>
+  <hr>
