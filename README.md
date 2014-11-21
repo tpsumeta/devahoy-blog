@@ -1,10 +1,10 @@
 ## Devahoy Blog  [ ![Codeship Status for Devahoy/devahoy-blog](https://codeship.com/projects/3c9279a0-5307-0132-2f7a-426e83f94b6a/status)](https://codeship.com/projects/48839)
 
-**[Devahoy](http://devahoy.com/)** , a personal website and blog about Android, Web and Games Development. Built with [Middleman](http://middlemanapp.com/), a static site generator. Hosted on Amazon s3. 
+**[Devahoy](http://devahoy.com/)** , a personal website and blog about Android, Web and Games Development. Built with [Middleman](http://middlemanapp.com/), a static site generator.
 
 ---
 
-Devahoy เป็นเว็บบล็อคเกี่ยวกับบทความสอน Android, Web และ Games โดยตอนนี้ได้ย้ายมาใช้ Middleman เพื่อ generate static website และทำการโฮสเว็บไว้ที่ Amazon e3 ซอร์สโค๊ดและบทความทั้งหมด นำไปศึกษาได้ครับ ดูรายละเอียด License ข้างล่างเลย
+Devahoy เป็นเว็บบล็อคเกี่ยวกับบทความสอน Android, Web และ Games โดยตอนนี้ได้ย้ายมาใช้ Middleman เพื่อ generate static website ซอร์สโค๊ดและบทความทั้งหมด นำไปศึกษาได้ครับ ดูรายละเอียด License ข้างล่างเลย
 
 
 ## Run it locally
@@ -33,7 +33,6 @@ Generate static folder
     - [Middleman Cloudfront](https://github.com/andrusha/middleman-cloudfront)
 	- [Middleman ImageOptim](https://github.com/plasticine/middleman-imageoptim)
 	- [Middleman-Blog](https://github.com/middleman/middleman-blog)
-- [Amazon Cloud](http://aws.amazon.com/)
 - [Bourbon.io](http://bourbon.io/)
 - [FluidBox](https://github.com/terrymun/Fluidbox)
 - [Trianglify](http://qrohlf.com/trianglify/)

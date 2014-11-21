@@ -129,8 +129,8 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
-  # Enable cache buster
-  activate :asset_hash
+  # Enable cache buster only javascript and css
+  activate :asset_hash, :exts => %w(.js .css)
 
   activate :gzip
 
